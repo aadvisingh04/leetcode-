@@ -13,7 +13,7 @@
  *     }
  * }
  */
-class Solution {
+/*class Solution {
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;
 
@@ -39,9 +39,10 @@ class Solution {
         return level;
         }
 }
+*/
 
 
-/*
+
  //RECURSIVE
 class Solution {
     public int maxDepth(TreeNode root) {
@@ -56,4 +57,3 @@ class Solution {
         return max;
     }
 }
-*/
