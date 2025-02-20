@@ -13,6 +13,7 @@
  *     }
  * }
  */
+
 class Solution {
     class Pair{
         TreeNode node;
@@ -27,7 +28,7 @@ class Solution {
 
           if(root==null) return ans;
 
-          TreeMap<Integer,Integer> map = new TreeMap<>();
+         // TreeMap<Integer,Integer> map = new TreeMap<>();
           Queue<Pair> q = new LinkedList<>();
           q.add(new Pair(root,0));
 
@@ -36,8 +37,12 @@ class Solution {
               TreeNode node = p.node;
               int level = p.level;
 
-              if(!map.containsKey(level)){
+             /* if(!map.containsKey(level)){
                 map.put(level,node.val);
+              }  */
+
+              if(level == ans.size()){
+                ans.add(node.val);
               }
               if(node.right!=null){
                  q.add(new Pair(node.right,level+1));
@@ -46,9 +51,9 @@ class Solution {
                  q.add(new Pair(node.left,level+1));
               }
           }
-          for(int node:map.keySet()){
-            ans.add(map.get(node));
-          }
+          /* for(int node:map.keySet()){
+            ans.add(map.get(node));   
+          }  */
           return ans;
     }
 }
