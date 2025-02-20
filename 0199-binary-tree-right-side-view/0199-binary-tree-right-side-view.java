@@ -43,12 +43,12 @@ class Solution {
 
               if(level == ans.size()){
                 ans.add(node.val);
-              }  
-              if(node.left!=null){
-                 q.add(new Pair(node.left,level+1));
-              }
+              } 
               if(node.right!=null){
                  q.add(new Pair(node.right,level+1));
+              } 
+              if(node.left!=null){
+                 q.add(new Pair(node.left,level+1));
               }
           }
            /* for(int node:map.keySet()){
