@@ -32,6 +32,11 @@ class Solution {
 } */
 
 //ITERATIVE WAY
+/* 
+1.left
+2.print
+3.right
+*/
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
