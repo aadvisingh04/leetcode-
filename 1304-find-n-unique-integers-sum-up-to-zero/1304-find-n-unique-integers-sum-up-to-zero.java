@@ -1,17 +1,9 @@
 class Solution {
-    public int[] sumZero(int n) {
-        int[] a = new int[n];
-        int idx = 0;
-
-        if (n % 2 != 0) {
-            a[idx++] = 0;
-        }
-
-        for (int i = 1; i <= n / 2; i++) {
-            a[idx++] = i;
-            a[idx++] = -i;
-        }
-
-        return a;
+public:
+    vector<int> sumZero(int n) {
+        vector<int> ans(n);
+        iota(ans.begin(), ans.begin()+n/2, -n/2);
+        iota(ans.end()-n/2, ans.end(), 1);
+        return ans;
     }
-}
+};
