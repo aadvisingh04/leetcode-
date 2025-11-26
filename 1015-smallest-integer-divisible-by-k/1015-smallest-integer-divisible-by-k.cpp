@@ -3,15 +3,21 @@ public:
     int smallestRepunitDivByK(int k) {
         if(k%2 == 0 || k%5 == 0) return -1;
         
-        long long int res=0;
+        int res=0;
         for(int i=1;i<=k;i++){
-            res = res*10+1;
-            if(res%k == 0) return i;           
+            res = (res*10+1)%k;
+            if(res == 0) return i;           
             
         }
         return -1;
     }
 };
+
+// 1 -> 1%3 = 1;
+// 11 -> (1*10+1)%3 -> 2
+// 111 -> (2*10+1)%3 -> 0
+
+
 
 
 
