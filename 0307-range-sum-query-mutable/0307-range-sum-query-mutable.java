@@ -31,7 +31,7 @@ class NumArray {
             return;
         }
         int mid = (l+r)/2;
-        if(i < mid) real_update(2*i+1,l,mid,targetIdx,val);       
+        if(targetIdx <= mid) real_update(2*i+1,l,mid,targetIdx,val);       
         else real_update(2*i+2,mid+1,r,targetIdx,val);
 
         segTree[i] = segTree[2*i+1] + segTree[2*i+2];
