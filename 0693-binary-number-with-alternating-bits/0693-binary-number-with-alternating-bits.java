@@ -1,14 +1,6 @@
 class Solution {
-    func hasAlternatingBits(_ n: Int) -> Bool {
-        var n = n, prev = ~(n & 1)
-        while n > 0 {
-            let curr = n & 1
-            if curr == prev {
-                return false
-            }
-            prev = curr
-            n >>= 1
-        }
-        return true
+    public boolean hasAlternatingBits(int n) {
+        int x = n ^ (n >> 1);
+        return (x & (x + 1)) == 0;
     }
 }
